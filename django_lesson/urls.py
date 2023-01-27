@@ -1,9 +1,12 @@
 # from django.urls import path, re_path, include
 # from my_app.views import main, main_new, user_number, regex, valid, invalid
 from django.urls import path, re_path, include
+from django.contrib import admin
+
 
 
 urlpatterns = [
+    path('admin/', admin.site.urls),
     path('', include('my_app.urls')),
     # path('', main),
     # path('users', main_new),
