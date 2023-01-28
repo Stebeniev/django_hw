@@ -12,7 +12,7 @@ class Author(models.Model):
         unique_together = ['first_name', 'last_name']
 
     def __str__(self):
-        return self.first_name
+        return f'{self.first_name} {self.last_name}'
 
 
 class Book(models.Model):
@@ -26,6 +26,4 @@ class Book(models.Model):
 
     def __str__(self):
         return self.name
-
-
 
