@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'my_app',
     'book',
     'library',
+    'site_blog'
 
 ]
 
