@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # 'my_app.apps.MyAppConfig',
     'my_app',
     'book',
+    'library',
 
 ]
 
