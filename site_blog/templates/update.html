@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update comments</title>
+</head>
+<body>
+{#Comment.objects.filter(body__icontains="start").update(body="12345")#}
+{#Comment.objects.filter(body__icontains="finish").update(body="123")#}
+{#Comment.objects.filter(body__icontains="middle").update(body="123")#}
+{% for comment in comments %}
+    <p>{{ comment.text }}</p>
+{% endfor %}
+</body>
+</html>

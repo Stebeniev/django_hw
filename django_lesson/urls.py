@@ -8,6 +8,7 @@ from django.contrib import admin
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('my_app.urls')),
+    path('', include('site_blog.urls'))
     # path('', main),
     # path('users', main_new),
     # path('users/<int:user_number>', user_number),
