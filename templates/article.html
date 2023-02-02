@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <div style="padding: 20px; background-color: blue">
+        {% if article_number|divisibleby:'2' %}
+            <h3>Article_number {{ article_number }} -Article is even</h3>
+        {% else %}
+            <h3>Article_number {{ article_number }} -Article is odd</h3>
+        {% endif %}
+        {% if slug_text %}
+            {% include 'slug_text.html' with slug='Hi! This is slug_text!!' %}
+        {% endif %}
+<a href="{% url 'main' %}">To the main page</a>
+    </div>
+{% endblock %}

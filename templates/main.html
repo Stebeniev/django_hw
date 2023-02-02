@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="page" style="background-color: gray; width: 500px; height: 200px; text-align: center; margin: 20px auto">
+    <h2>Hi, This is a main page!!!!</h2>
+    <h3></h3>
+    {% block content %}
+    {% endblock %}
+    <br>
+    <a href="{% url 'article' article_number %}">Article with random </a>
+    <br>
+    {#<a href="{% url 'main' %}">To the main page</a>#}
+</div>
+</body>
+</html>
