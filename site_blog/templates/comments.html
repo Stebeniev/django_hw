@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Comment- last 5</title>
+</head>
+<body>
+{#Comment.objects.all()#}
+{#Comment.objects.order_by('-created_at')[:5]#}
+<h2>Comment- last 5</h2>
+{% for comment in comments %}
+    <p>{{ comment.text|linebreaks }} {{ comment.created_at }}</p>
+{% endfor %}
+</body>
+</html>
