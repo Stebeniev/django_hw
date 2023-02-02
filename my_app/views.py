@@ -1,6 +1,6 @@
 # from django.http import HttpResponse
 from django.shortcuts import render
-from random import randrange
+from random import randrange, randint
 
 
 # def main(request):
@@ -53,7 +53,7 @@ def main(request):
 
 def first(request):
     data = {
-        'article_number': randrange(1, 100),
+        'article_number': randint(0, 100),
 
     }
     return render(request, 'first.html', data)
