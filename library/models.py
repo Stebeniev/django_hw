@@ -1,8 +1,6 @@
 from django.db import models
 
 
-
-
 class Author(models.Model):
     first_name = models.CharField(max_length=50, default='')
     last_name = models.CharField(max_length=50, null=True, blank=True)
@@ -16,7 +14,7 @@ class Author(models.Model):
         return self.first_name
 
 
-class User (models.Model):
+class User(models.Model):
     first_name = models.CharField(max_length=50, null=True, blank=True)
     last_name = models.CharField(max_length=50, null=True, blank=True)
 
@@ -41,5 +39,18 @@ class Book(models.Model):
         verbose_name = 'book'
         verbose_name_plural = 'books'
 
+
     def __str__(self):
         return self.name
+
+
+class RegistrationCard(models.Model):
+    book = models.ForeignKey(Book, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    date_of_issue = models.DateField(null=True)
+    return_date = models.DateField(null=True)
+
+    def __str__(self):
+        return f'{self.book} {self.user} {self.date_of_issue} {self.return_date}'
+
+
